@@ -8,8 +8,8 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --max-warnings 0",
     "lint:fix": "eslint . --ext js,jsx --fix",
-    "test:e2e": "cypress run",
-    "test:e2e:open": "cypress open",
+    "test:e2e": "start-server-and-test dev http://localhost:5173 'cypress run'",
+    "test:e2e:open": "start-server-and-test dev http://localhost:5173 'cypress open'",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -35,6 +35,7 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^4.6.2",
     "postcss": "^8.5.20",
+    "start-server-and-test": "^3.0.11",
     "tailwindcss": "^3.4.19",
     "vite": "^8.1.1"
   },
