@@ -43,6 +43,14 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'no-console': 'error',
     'jsx-a11y/label-has-associated-control': 'error',
+    // No PropTypes/TypeScript in this stack (Zod validates form data, not
+    // component props), so the propTypes-driven react/* rules don't apply.
+    'react/prop-types': 'off',
+    'react/require-default-props': 'off',
+    // React Hook Form's register()/Controller field props are spread onto
+    // inputs throughout common/ and the step components; this is the
+    // standard RHF integration pattern, not a code smell.
+    'react/jsx-props-no-spreading': 'off',
   },
   ignorePatterns: ['dist', 'node_modules'],
   overrides: [
