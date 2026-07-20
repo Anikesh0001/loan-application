@@ -19,6 +19,21 @@ Tracks work that requires human action, plus general project task notes.
     dev server and wait for `http://localhost:5173` before running Cypress, so
     no manual "start the dev server in another terminal" step is needed.
 
+- [ ] Confirm/correct the 14 cross-step schema dependencies listed in
+  `src/schemas/schemaFactory.js`'s TODO comment before Phase 6.
+  - Why manual: the brief referenced "14 dependencies" for the eventual
+    real schema logic, but the phase message I received didn't include
+    the itemized list itself. I reconstructed a plausible 14-item list
+    from domain knowledge (loan-type-dependent ranges/purposes/rates,
+    co-applicant threshold, employment/residence/document conditionals,
+    PAN entity type, home-loan property fields) and constants.js/
+    STEP_REGISTRY already in the repo. It's a reasonable placeholder,
+    not a transcription of the original spec — please check it against
+    whatever authoritative source has the real list before Phase 6 is
+    implemented, so validation logic isn't built against a guess.
+
 ## Phase Log
 
 - Phase 0 (scaffold, tooling, folder structure): complete.
+- Phase 1 (wizard engine + component library): complete. Merged
+  feature/wizard-and-components into main on 2026-07-21.
